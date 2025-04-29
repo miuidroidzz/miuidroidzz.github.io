@@ -1,7 +1,7 @@
 
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: Arial, sans-serif;
   background: linear-gradient(120deg, #ffffff, #222222, #888888);
   background-size: 400% 400%;
   animation: gradientAnimation 20s ease infinite;
