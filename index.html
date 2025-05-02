@@ -13,8 +13,8 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #0f0f0f, #1e1e1e);
-      color: #fff;
+      background-color: #2d2d2d; /* Cor de fundo */
+      color: #ffdfa1; /* Cor do texto principal */
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -55,7 +55,7 @@
       to { transform: translateY(0); opacity: 1; }
     }
 
-    header img#elliot-glitch {
+    header img#tux-gif {
       width: 110px;
       border-radius: 12px;
       margin-bottom: 15px;
@@ -71,18 +71,19 @@
     h1 {
       font-size: 2.8em;
       margin-bottom: 8px;
+      color: #ffffff; /* Título em branco */
     }
 
     nav a {
       margin: 0 12px;
-      color: #fff;
+      color: #ffdfa1; /* Cor dos links */
       font-size: 1.7em;
       transition: transform 0.3s ease, color 0.3s ease;
     }
 
     nav a:hover {
       transform: scale(1.25);
-      color: #ccc;
+      color: #ffffff; /* Links ao passar o mouse */
     }
 
     section.about {
@@ -104,14 +105,15 @@
     section.about h2 {
       font-size: 2em;
       margin-bottom: 10px;
+      color: #ffffff; /* Título em branco */
     }
 
     .more-btn {
       margin-top: 20px;
       display: inline-block;
       padding: 12px 25px;
-      background: #2575fc;
-      color: #fff;
+      background: #ffdfa1; /* Cor de fundo do botão */
+      color: #2d2d2d; /* Cor do texto do botão */
       border: none;
       border-radius: 30px;
       font-size: 1em;
@@ -121,7 +123,8 @@
     }
 
     .more-btn:hover {
-      background: #6a11cb;
+      background: #ffffff; /* Cor de fundo do botão ao passar o mouse */
+      color: #2d2d2d; /* Cor do texto do botão ao passar o mouse */
       transform: scale(1.05);
     }
 
@@ -135,6 +138,7 @@
       font-size: 0.85em;
       text-align: center;
       animation: fadeInFooter 2s ease;
+      color: #ffdfa1; /* Cor do texto do rodapé */
     }
 
     @keyframes fadeInFooter {
@@ -153,7 +157,7 @@
         padding: 15px;
         margin: 15px 10px;
       }
-      header img#elliot-glitch {
+      header img#tux-gif {
         width: 80px;
       }
       .more-btn {
@@ -166,7 +170,8 @@
 <body>
   <div class="bg-animation"></div>
   <header>
-    <img src="download.jpg" alt="Hello Friend" id="elliot-glitch">
+    <!-- Novo GIF do Tux -->
+    <img src="https://www.pinclipart.com/picdir/big/549-5496249_linux-tux-png-clipart.png" alt="Tux Linux" id="tux-gif">
     <h1>MiuiDroid</h1>
     <p>Desenvolvedor Android | Entusiasta de Linux | Web em formação</p>
     <nav>
@@ -188,4 +193,3 @@
   </footer>
 </body>
 </html>
-
