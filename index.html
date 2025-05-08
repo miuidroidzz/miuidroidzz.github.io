@@ -1,195 +1,314 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>MiuiDroid | Portfólio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #2d2d2d; /* Cor de fundo */
-      color: #ffdfa1; /* Cor do texto principal */
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      min-height: 100vh;
-      overflow-x: hidden;
-      animation: fadeInBody 1s ease-out;
-    }
-
-    @keyframes fadeInBody {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    .bg-animation {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      background: radial-gradient(circle at center, rgba(255,255,255,0.05), transparent 70%);
-      pointer-events: none;
-      z-index: -1;
-      animation: pulseBg 8s ease-in-out infinite;
-    }
-
-    @keyframes pulseBg {
-      0%, 100% { opacity: 0.4; }
-      50% { opacity: 0.8; }
-    }
-
-    header {
-      text-align: center;
-      padding: 40px 20px 20px;
-      animation: slideDown 1s ease;
-    }
-
-    @keyframes slideDown {
-      from { transform: translateY(-50px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-
-    header img#tux-gif {
-      width: 110px;
-      border-radius: 12px;
-      margin-bottom: 15px;
-      animation: floatImg 3s ease-in-out infinite;
-      box-shadow: 0 0 10px rgba(255,255,255,0.2);
-    }
-
-    @keyframes floatImg {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-5px); }
-    }
-
-    h1 {
-      font-size: 2.8em;
-      margin-bottom: 8px;
-      color: #ffffff; /* Título em branco */
-    }
-
-    nav a {
-      margin: 0 12px;
-      color: #ffdfa1; /* Cor dos links */
-      font-size: 1.7em;
-      transition: transform 0.3s ease, color 0.3s ease;
-    }
-
-    nav a:hover {
-      transform: scale(1.25);
-      color: #ffffff; /* Links ao passar o mouse */
-    }
-
-    section.about {
-      max-width: 650px;
-      padding: 25px;
-      margin: 25px;
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 15px;
-      text-align: center;
-      animation: fadeInSection 1.5s ease;
-      box-shadow: 0 0 12px rgba(255,255,255,0.08);
-    }
-
-    @keyframes fadeInSection {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    section.about h2 {
-      font-size: 2em;
-      margin-bottom: 10px;
-      color: #ffffff; /* Título em branco */
-    }
-
-    .more-btn {
-      margin-top: 20px;
-      display: inline-block;
-      padding: 12px 25px;
-      background: #ffdfa1; /* Cor de fundo do botão */
-      color: #2d2d2d; /* Cor do texto do botão */
-      border: none;
-      border-radius: 30px;
-      font-size: 1em;
-      cursor: pointer;
-      transition: background 0.3s ease, transform 0.2s ease;
-      text-decoration: none;
-    }
-
-    .more-btn:hover {
-      background: #ffffff; /* Cor de fundo do botão ao passar o mouse */
-      color: #2d2d2d; /* Cor do texto do botão ao passar o mouse */
-      transform: scale(1.05);
-    }
-
-    .more-btn i {
-      margin-left: 8px;
-    }
-
-    footer {
-      margin-top: auto;
-      padding: 20px;
-      font-size: 0.85em;
-      text-align: center;
-      animation: fadeInFooter 2s ease;
-      color: #ffdfa1; /* Cor do texto do rodapé */
-    }
-
-    @keyframes fadeInFooter {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    @media screen and (max-width: 480px) {
-      h1 {
-        font-size: 2em;
-      }
-      nav a {
-        font-size: 1.3em;
-      }
-      section.about {
-        padding: 15px;
-        margin: 15px 10px;
-      }
-      header img#tux-gif {
-        width: 80px;
-      }
-      .more-btn {
-        font-size: 0.9em;
-        padding: 10px 20px;
-      }
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MiuiDroid | Portfólio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #2d2d2d;
+            color: #ffdfa1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+            animation: fadeInBody 1s ease-out;
+        }
+        
+        @keyframes fadeInBody {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, rgba(255, 255, 255, 0.05), transparent 70%);
+            pointer-events: none;
+            z-index: -1;
+            animation: pulseBg 8s ease-in-out infinite;
+        }
+        
+        @keyframes pulseBg {
+            0%,
+            100% {
+                opacity: 0.4;
+            }
+            50% {
+                opacity: 0.8;
+            }
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 20px 20px;
+            animation: slideDown 1s ease;
+        }
+        
+        @keyframes slideDown {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        header img#tux-gif {
+            width: 110px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            animation: floatImg 3s ease-in-out infinite;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+        
+        @keyframes floatImg {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-5px);
+            }
+        }
+        
+        h1 {
+            font-size: 2.8em;
+            margin-bottom: 8px;
+            color: #ffffff;
+        }
+        
+        .glow {
+            animation: glow 2s infinite alternate;
+        }
+        
+        @keyframes glow {
+            0%,
+            100% {
+                text-shadow: 0 0 10px #ffdfa1, 0 0 20px #ffdfa1;
+            }
+            50% {
+                text-shadow: 0 0 30px #ffffff, 0 0 40px #ffdfa1;
+            }
+        }
+        
+        nav a {
+            margin: 0 12px;
+            color: #ffdfa1;
+            font-size: 1.7em;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+        
+        nav a:hover {
+            transform: scale(1.25);
+            color: #ffffff;
+        }
+        
+        .swing-hover:hover {
+            animation: swing 1s ease-in-out;
+        }
+        
+        @keyframes swing {
+            20% {
+                transform: rotate(15deg);
+            }
+            40% {
+                transform: rotate(-10deg);
+            }
+            60% {
+                transform: rotate(5deg);
+            }
+            80% {
+                transform: rotate(-5deg);
+            }
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+        
+        section.about {
+            max-width: 650px;
+            padding: 25px;
+            margin: 25px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            text-align: center;
+            animation: fadeInSection 1.5s ease;
+            box-shadow: 0 0 12px rgba(255, 255, 255, 0.08);
+        }
+        
+        @keyframes fadeInSection {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        section.about h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+        
+        .more-btn {
+            margin-top: 20px;
+            display: inline-block;
+            padding: 12px 25px;
+            background: #ffdfa1;
+            color: #2d2d2d;
+            border: none;
+            border-radius: 30px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+            text-decoration: none;
+        }
+        
+        .more-btn:hover {
+            background: #ffffff;
+            color: #2d2d2d;
+            transform: scale(1.05);
+        }
+        
+        .more-btn i {
+            margin-left: 8px;
+        }
+        
+        footer {
+            margin-top: auto;
+            padding: 20px;
+            font-size: 0.85em;
+            text-align: center;
+            animation: fadeInFooter 2s ease;
+            color: #ffdfa1;
+        }
+        
+        @keyframes fadeInFooter {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        @media screen and (max-width: 480px) {
+            h1 {
+                font-size: 2em;
+            }
+            nav a {
+                font-size: 1.3em;
+            }
+            section.about {
+                padding: 15px;
+                margin: 15px 10px;
+            }
+            header img#tux-gif {
+                width: 80px;
+            }
+            .more-btn {
+                font-size: 0.9em;
+                padding: 10px 20px;
+            }
+        }
+    </style>
 </head>
-<body>
-  <div class="bg-animation"></div>
-  <header>
-    <!-- Novo GIF do Tux -->
-    <img src="https://www.pinclipart.com/picdir/big/549-5496249_linux-tux-png-clipart.png" alt="Tux Linux" id="tux-gif">
-    <h1>MiuiDroid</h1>
-    <p>Desenvolvedor Android | Entusiasta de Linux | Web em formação</p>
-    <nav>
-      <a href="https://github.com/miuidroidzz" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-      <a href="https://www.tiktok.com/@miuidroid" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
-    </nav>
-  </header>
 
-  <section class="about">
-    <h2>Sobre Mim</h2>
-    <p>Sou o MiuiDroid, um jovem desenvolvedor de 14 anos apaixonado por Android, Linux e tecnologia. Mesmo com recursos limitados (um smartphone!), estou sempre aprendendo e criando soluções!</p>
-    <a class="more-btn" href="https://github.com/miuidroidzz" target="_blank">
+<body>
+    <div class="bg-animation"></div>
+    <header>
+        <img src="https://www.pinclipart.com/picdir/big/549-5496249_linux-tux-png-clipart.png" alt="Tux Linux" id="tux-gif">
+        <h1 class="glow">MiuiDroid</h1>
+        <p>Desenvolvedor Android | Entusiasta de Linux | Web em formação</p>
+        <nav>
+            <a href="https://github.com/miuidroidzz" target="_blank" title="GitHub"><i class="fab fa-github swing-hover"></i></a>
+            <a href="https://www.tiktok.com/@miuidroid" target="_blank" title="TikTok"><i class="fab fa-tiktok swing-hover"></i></a>
+        </nav>
+    </header>
+
+    <section class="about">
+        <h2>Sobre Mim</h2>
+        <p>Sou o MiuiDroid, um jovem desenvolvedor de 14 anos apaixonado por Android, Linux e tecnologia. Mesmo com recursos limitados (um smartphone!), estou sempre aprendendo e criando soluções!</p>
+        <a class="more-btn" href="https://github.com/miuidroidzz" target="_blank">
       Saiba mais sobre mim e meus projetos <i class="fas fa-arrow-right"></i>
     </a>
-  </section>
+    </section>
 
-  <footer>
-    &copy; 2025 MiuiDroid | Todos os direitos reservados
-  </footer>
+    <footer>
+        &copy; 2025 MiuiDroid | Todos os direitos reservados
+    </footer>
+
+    <script>
+        // Digitação automática
+        const subtitle = document.querySelector('header p');
+        const originalText = subtitle.textContent;
+        subtitle.textContent = '';
+        let i = 0;
+
+        function typeWriter() {
+            if (i < originalText.length) {
+                subtitle.textContent += originalText.charAt(i);
+                i++;
+                setTimeout(typeWriter, 50);
+            }
+        }
+        setTimeout(typeWriter, 800);
+
+        // Scroll reveal nas seções
+        const sections = document.querySelectorAll('section');
+        const revealOnScroll = () => {
+            const trigger = window.innerHeight * 0.85;
+            sections.forEach(sec => {
+                const top = sec.getBoundingClientRect().top;
+                if (top < trigger) {
+                    sec.style.opacity = '1';
+                    sec.style.transform = 'translateY(0)';
+                }
+            });
+        };
+
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('load', () => {
+            sections.forEach(sec => {
+                sec.style.opacity = '0';
+                sec.style.transform = 'translateY(50px)';
+                sec.style.transition = 'all 0.8s ease';
+            });
+            revealOnScroll();
+        });
+
+        // Bounce ao passar o mouse nos ícones
+        document.querySelectorAll('nav a i').forEach(icon => {
+            icon.addEventListener('mouseenter', () => {
+                icon.classList.add('fa-bounce');
+            });
+            icon.addEventListener('mouseleave', () => {
+                icon.classList.remove('fa-bounce');
+            });
+        });
+    </script>
 </body>
+
 </html>
