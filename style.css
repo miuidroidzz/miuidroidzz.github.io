@@ -34,3 +34,39 @@ h1, h2 {
 .button:hover {
   background-color: #1f6feb;
 }
+
+.projects {
+  max-width: 800px;
+  margin: 30px;
+  padding: 20px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 15px;
+  box-shadow: 0 0 12px rgba(255,255,255,0.08);
+  text-align: center;
+}
+
+.projects h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.project {
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.project h3 {
+  color: #ffdfa1;
+  margin-bottom: 8px;
+}
+
+.project ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.project ul li::before {
+  content: "• ";
+  color: #ffdfa1;
+}
